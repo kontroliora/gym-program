@@ -220,7 +220,7 @@ const today=new Date(); const iso=d=>new Date(d.getTime()-d.getTimezoneOffset()*
 let curT=1, curDate=iso(today);
 function sessionId(){return curDate+"-t"+curT}
 function curSession(){return sessions.find(s=>s.id===sessionId())||{id:sessionId(),date:curDate,t:curT,notes:{},done:{}}}
-function nextTraining(){const last=sessions.filter(s=>s.date<=iso(today)&&Object.keys(s.notes||{}).length).sort((a,b)=>b.date.localeCompare(a.date))[0]; if(!last) return null; return last.t%5+1}
+function nextTraining(){const last=sessions.filter(s=>s.date<iso(today)&&Object.keys(s.notes||{}).length).sort((a,b)=>b.date.localeCompare(a.date))[0]; if(!last) return null; return last.t%5+1}
 function lastNote(exId){const prev=sessions.filter(s=>s.t===curT&&s.date<curDate&&s.notes&&s.notes[exId]).sort((a,b)=>b.date.localeCompare(a.date))[0];return prev?{date:prev.date,text:prev.notes[exId]}:null}
 function r25(x){const v=Math.round(x/2.5)*2.5;return (v%1===0?String(v):v.toFixed(1)).replace(".",",")}
 function warmupText(w,kgStr,fromPrev){
@@ -473,7 +473,7 @@ document.getElementById("dateIn").onchange=e=>{curDate=e.target.value||iso(today
 // ---------- BOOT ----------
 try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
 mergeLocalSessions(); mergeLocalWeights();
-const n0=nextTraining(); if(n0) curT=n0;
+const todayS=sessions.find(s=>s.date===curDate&&Object.keys(s.notes||{}).length); const n0=todayS?todayS.t:nextTraining(); if(n0) curT=n0;
 renderSeg(); renderTrain(); renderFood(); renderWeight(); renderRules();
 setStatus("Записва се в този телефон");
 
