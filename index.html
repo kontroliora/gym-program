@@ -139,9 +139,9 @@ const UPPER_STRETCH=[
 const T={
  1:{name:"Долна A",sub:"квадрицепс",morning:null,ex:[
   {id:"t1e1",n:"Прасец прав на Хакен",en:"hack squat calf raise",w:"1 × 12 лека",s:"4",r:"8–12",rest:"60–90 сек",pause:"Пауза 2 сек ДОЛУ, 1 сек горе",t:"Коляното изпънато, без подскачане."},
-  {id:"t1e2",n:"Клек на Смит или хакен клек",en:"smith machine squat",w:"2 серии",s:"4",r:"6–8",rest:"2–3 мин",pause:"Бавно надолу 2–3 сек",t:"Издишваш на изкачването, не задържаш дъха."},
+  {id:"t1e2",n:"Клек на Смит",en:"smith machine squat",w:"2 серии",s:"4",r:"6–8",rest:"2–3 мин",pause:"Бавно надолу 2–3 сек",t:"Издишваш на изкачването, не задържаш дъха."},
   {id:"t1e3",n:"Лег преса",en:"leg press",w:"1 серия",s:"3",r:"10–12",rest:"2 мин",pause:null,t:"Без заключване на коленете горе."},
-  {id:"t1e4",n:"Сгъване за задно бедро седнал",en:"seated leg curl",w:"1 серия",s:"4",r:"10–12",rest:"90 сек",pause:"Задържане 1 сек свито",t:""},
+  {id:"t1e4",g:"legcurl",n:"Сгъване за задно бедро седнал",en:"seated leg curl",w:"1 серия",s:"4",r:"8–12",rest:"90 сек",pause:"Задържане 1 сек свито",t:"Торсът леко напред, навеждане от таза, гърбът прав. Същото упражнение като в Т3 – записите са общи."},
   {id:"t1e5",n:"Хиперекстензия 45°",en:"45 degree back extension",w:"1 без тежест",s:"3",r:"12–15",rest:"90 сек",pause:null,t:"Спираш на права линия, не се извиваш нагоре."},
   {id:"t1e6",n:"Повдигане на краката от вис",en:"hanging leg raise",w:"—",s:"3",r:"12–15",rest:"60 сек",pause:"Бавно спускане",t:""}
  ],after:[],stretch:"lower"},
@@ -153,11 +153,11 @@ const T={
   {id:"t2e5",n:"Разтваряне встрани на скрипец, единично",en:"single arm cable lateral raise",w:"1 серия",s:"3",r:"12–15 / ръка",rest:"60 сек",pause:null,t:"Макарата долу, дръжката в далечната ръка."},
   {id:"t2e6",n:"Трицепс над глава с въже на скрипец",en:"cable overhead tricep extension",w:"1 серия",s:"3",r:"10–12",rest:"60–90 сек",pause:"1 сек в разтягането",t:"Гръб към машината, крачка напред, единият крак пред другия за баланс. Лактите сочат напред и стоят до ушите, движи се само предмишницата."},
   {id:"t2e8",n:"Трицепс на скрипец с V-дръжка",en:"v bar tricep pushdown",w:"1 серия",s:"2",r:"12–15",rest:"60 сек",pause:"Задържане 1 сек долу",t:"Лактите залепени до тялото. Стари тежести: около 72 кг."},
-  {id:"t2e7",n:"Външна ротация с ластик",en:"band external rotation",w:"—",s:"2",r:"15",rest:"45 сек",pause:null,t:"Лакътят залепен до тялото."}
+  {id:"t2e7",g:"bander",nolog:true,n:"Външна ротация с ластик",en:"band external rotation",w:"—",s:"2",r:"15",rest:"45 сек",pause:null,t:"Лакътят залепен до тялото."}
  ],after:[{kind:"cardio",id:"t2c",title:"Стълби 10 мин (по желание)",text:"Средно темпо, можеш да говориш. После разтягане."}],stretch:"upper"},
  3:{name:"Долна B",sub:"задна верига",morning:null,ex:[
   {id:"t3e1",n:"Прасец прав на лег пресата",en:"leg press calf raise",w:"1 × 12 лека",s:"4",r:"10–15",rest:"60–90 сек",pause:"Пауза 2 сек ДОЛУ",t:"Коляното изпънато."},
-  {id:"t3e2",n:"Сгъване за задно бедро седнал, торсът напред",en:"seated leg curl",w:"2 серии",s:"4",r:"8–12",rest:"90 сек",pause:"Задържане 1 сек свито",t:"Навеждане от таза, гърбът прав."},
+  {id:"t3e2",g:"legcurl",n:"Сгъване за задно бедро седнал",en:"seated leg curl",w:"2 серии",s:"4",r:"8–12",rest:"90 сек",pause:"Задържане 1 сек свито",t:"Торсът леко напред, навеждане от таза, гърбът прав. Същото упражнение като в Т1 – записите са общи."},
   {id:"t3e3",n:"Хакен клек",en:"hack squat",w:"2 серии",s:"3",r:"10–12",rest:"2 мин",pause:null,t:"Стъпалата малко по-напред = повече седалище."},
   {id:"t3e4",n:"Лег преса с един крак",en:"single leg press",w:"1 серия",s:"3",r:"10 / крак",rest:"90 сек",pause:null,t:""},
   {id:"t3e5",n:"Бедрени екстензии",en:"leg extension",w:"1 серия",s:"3",r:"12–15",rest:"60–90 сек",pause:"Задържане 1 сек горе",t:""},
@@ -180,7 +180,7 @@ const T={
   {id:"t5e9",n:"Разтваряне встрани с дъмбели",en:"dumbbell lateral raise",w:"1 серия",s:"3",r:"12–15",rest:"60 сек",pause:null,t:"Леко свити лакти, до нивото на раменете, без люлеене. Втора порция за средното рамо – то дава ширината."},
   {id:"t5e3",n:"Задно рамо на скрипец",en:"cable rear delt fly",w:"1 серия",s:"3",r:"15",rest:"60 сек",pause:null,t:""},
   {id:"t5e4",n:"Горен скрипец, тесен обратен хват",en:"reverse grip lat pulldown",w:"1 серия",s:"2",r:"12",rest:"90 сек",pause:null,t:"Долният лат."},
-  {id:"t5e5",n:"Външна ротация с ластик",en:"band external rotation",w:"—",s:"2",r:"15",rest:"45 сек",pause:null,t:""},
+  {id:"t5e5",g:"bander",nolog:true,n:"Външна ротация с ластик",en:"band external rotation",w:"—",s:"2",r:"15",rest:"45 сек",pause:null,t:""},
   {id:"t5e7",n:"Бицепс с дъмбели седнал",en:"seated dumbbell curl",w:"1 серия",s:"3",r:"8–10",rest:"90 сек",pause:null,t:"Двете ръце едновременно, гърбът на облегалката, без люлеене. Стари тежести: 20 кг × 8."},
   {id:"t5e8",n:"Трицепс на скрипец с дълъг прав лост, хват на ширината на раменете",en:"straight bar tricep pushdown",w:"1 серия",s:"3",r:"12–15",rest:"60 сек",pause:null,t:"Лактите до тялото, движи се само предмишницата. Стари тежести: 72 кг."},
   {id:"t5e10",n:"Сгъване с крив лост, хват отгоре",en:"reverse grip ez bar curl",w:"1 серия",s:"2",r:"12–15",rest:"60 сек",pause:null,t:"Дланите надолу, лактите до тялото. Предмишница и долната част на бицепса. Стари тежести: около 25 кг."},
@@ -221,7 +221,14 @@ let curT=1, curDate=iso(today);
 function sessionId(){return curDate+"-t"+curT}
 function curSession(){return sessions.find(s=>s.id===sessionId())||{id:sessionId(),date:curDate,t:curT,notes:{},done:{}}}
 function nextTraining(){const last=sessions.filter(s=>s.date<iso(today)&&Object.keys(s.notes||{}).length).sort((a,b)=>b.date.localeCompare(a.date))[0]; if(!last) return null; return last.t%5+1}
-function lastNote(exId){const prev=sessions.filter(s=>s.t===curT&&s.date<curDate&&s.notes&&s.notes[exId]).sort((a,b)=>b.date.localeCompare(a.date))[0];return prev?{date:prev.date,text:prev.notes[exId]}:null}
+function exGroup(id){for(const k in T){const x=T[k].ex.find(e=>e.id===id);if(x)return x.g||x.id}return id}
+function groupIds(id){const g=exGroup(id),out=[];for(const k in T)T[k].ex.forEach(e=>{if((e.g||e.id)===g)out.push(e.id)});return out}
+function lastNote(exId){const ids=groupIds(exId),sid=sessionId();let best=null;
+  sessions.forEach(s=>{if(!s.notes||s.id===sid)return; if(s.date>curDate)return;
+    ids.forEach(id=>{const v=s.notes[id];if(!v)return;const nv=norm(v);if(!nv.kg&&!nv.note)return;
+      const key=s.date+"|"+String(s.updated||0).padStart(15,"0");
+      if(!best||key>best.key)best={key,date:s.date,text:v,t:s.t};});});
+  return best?{date:best.date,text:best.text,t:best.t}:null}
 function r25(x){const v=Math.round(x/2.5)*2.5;return (v%1===0?String(v):v.toFixed(1)).replace(".",",")}
 function warmupText(w,kgStr,fromPrev){
   if(!w||w==="—") return "";
@@ -278,9 +285,10 @@ function renderTrain(){
     c.appendChild(sp);
     if(x.pause) c.appendChild(el("span","chip",x.pause));
     if(x.t) c.appendChild(el("p","tech",x.t));
+    if(x.nolog){body.appendChild(c);return;}
     const ln=lastNote(x.id);
     const last=el("div","prev");
-    last.appendChild(el("div","lbl",ln?("Миналия път · "+fmtDate(ln.date)):"Миналия път"));
+    last.appendChild(el("div","lbl",ln?("Миналия път · "+fmtDate(ln.date)+(ln.t!==curT?" · от Т"+ln.t:"")):"Миналия път"));
     if(ln){const v=norm(ln.text);
       const row=el("div","prow");
       row.appendChild(el("div","pkg",v.kg?(v.kg+" кг"):"— кг"));
